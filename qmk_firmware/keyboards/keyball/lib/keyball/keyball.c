@@ -122,7 +122,9 @@ static char to_1x(uint8_t x) {
 
 static void add_cpi(int8_t delta) {
     int16_t v = keyball_get_cpi() + delta;
-    keyball_set_cpi(v < 1 ? 1 : v);
+    if (v > 0) {
+        keyball_set_cpi(v);
+    }
 }
 
 static void add_scroll_div(int8_t delta) {
@@ -703,10 +705,10 @@ bool process_record_kb(uint16_t keycode, keyrecord_t *record) {
                 add_cpi(-1);
                 break;
             case CPI_I1K:
-                add_cpi(10);
+                add_cpi(50);
                 break;
             case CPI_D1K:
-                add_cpi(-10);
+                add_cpi(-50);
                 break;
 
             case SCRL_TO:
