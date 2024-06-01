@@ -27,7 +27,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 //#    define RGBLIGHT_EFFECT_SNAKE
 //#    define RGBLIGHT_EFFECT_KNIGHT
 //#    define RGBLIGHT_EFFECT_CHRISTMAS
-//#    define RGBLIGHT_EFFECT_STATIC_GRADIENT
+#    define RGBLIGHT_EFFECT_STATIC_GRADIENT
 //#    define RGBLIGHT_EFFECT_RGB_TEST
 //#    define RGBLIGHT_EFFECT_ALTERNATING
 //#    define RGBLIGHT_EFFECT_TWINKLE
@@ -37,5 +37,10 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 #define POINTING_DEVICE_AUTO_MOUSE_ENABLE
 #define AUTO_MOUSE_DEFAULT_LAYER 2
+
+#define OLED_TIMEOUT 30000                   // OLED自動消灯時間 [ms]
+#define TAPPING_TERM 180                     // キー長押し時間 [ms]
+#define KEYBALL_CPI_DEFAULT 800              // マウス速度 (default: 500)
+#define KEYBALL_SCROLL_DIV_DEFAULT 5         // スクロール速度 (default: 4)
 
 #define LAYER_LED_ENABLE
