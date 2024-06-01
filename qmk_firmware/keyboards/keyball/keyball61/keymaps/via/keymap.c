@@ -39,27 +39,27 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   ),
 
   [1] = LAYOUT_universal(
-    KC_TRANSPARENT, KC_F1,       KC_F2,        KC_F3,       KC_F4,          KC_F5,                                        KC_F6,       KC_F7,       KC_F8,            KC_F9,        KC_F10,                KC_F11,
-    KC_TRANSPARENT, S(KC_1),     S(KC_2),      S(KC_3),     S(KC_4),        S(KC_5),                                      S(KC_6)  ,   S(KC_7),     S(KC_8),          S(KC_9),      S(KC_INTERNATIONAL_3), S(KC_F12),
-    KC_TRANSPARENT, KC_F1,       KC_F2,        KC_F3,       KC_F4,          KC_F5,                                        S(KC_EQUAL), KC_MINUS,    KC_RIGHT_BRACKET, KC_BACKSLASH, S(KC_SEMICOLON),       S(KC_QUOTE),
-    KC_TRANSPARENT, KC_F6,       KC_F7,        KC_F8,       KC_F9,          KC_F10,         KC_F11,         KC_F12,       KC_EQUAL,    S(KC_MINUS), S(KC_COMMA),      S(KC_DOT),    S(KC_SLSH),            S(KC_INTERNATIONAL_1),
-    KC_TRANSPARENT, KC_LEFT_GUI, KC_LEFT_CTRL, KC_LEFT_ALT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_BACKSPACE, KC_ENTER,    _______,     _______,          _______,      KC_TRANSPARENT,        KC_TRANSPARENT
+    KC_TRANSPARENT, KC_F1,       KC_F2,        KC_F3,       KC_F4,          KC_F5,                                  KC_F6,       KC_F7,       KC_F8,            KC_F9,        KC_F10,                KC_F11,
+    KC_TRANSPARENT, S(KC_1),     S(KC_2),      S(KC_3),     S(KC_4),        S(KC_5),                                S(KC_6),     S(KC_7),     S(KC_8),          S(KC_9),      S(KC_INTERNATIONAL_3), S(KC_F12),
+    KC_TRANSPARENT, KC_F1,       KC_F2,        KC_F3,       KC_F4,          KC_F5,                                  S(KC_EQUAL), KC_MINUS,    KC_RIGHT_BRACKET, KC_BACKSLASH, S(KC_SEMICOLON),       S(KC_QUOTE),
+    KC_TRANSPARENT, KC_F6,       KC_F7,        KC_F8,       KC_F9,          KC_F10,   KC_F11,         KC_F12,       KC_EQUAL,    S(KC_MINUS), S(KC_COMMA),      S(KC_DOT),    S(KC_SLSH),            S(KC_INTERNATIONAL_1),
+    KC_TRANSPARENT, KC_LEFT_GUI, KC_LEFT_CTRL, KC_LEFT_ALT, KC_TRANSPARENT, KC_SPACE, KC_TRANSPARENT, KC_BACKSPACE, KC_ENTER,    _______,     _______,          _______,      KC_TRANSPARENT,        KC_TRANSPARENT
   ),
 
   [2] = LAYOUT_universal(
     KC_TRANSPARENT, KC_F1,          KC_F2,          KC_F3,          KC_F4,          KC_F5,                                      KC_F6,        KC_F7,      KC_F8,      KC_F9,      KC_F10,         KC_F11,
     KC_TRANSPARENT, KC_SLASH,       KC_7,           KC_8,           KC_9,           KC_MINUS,                                   KC_NO,        KC_MS_BTN4, KC_MS_BTN5, KC_MS_BTN3, KC_NO,          KC_F12,
-    KC_TRANSPARENT, S(KC_QUOTE),    KC_4,           KC_5,           KC_6,           S(KC_SEMICOLON),                            KC_PAGE_UP,   KC_MS_BTN1, KC_DOWN,    KC_MS_BTN2, KC_HOME,        _______,
-    KC_TRANSPARENT, KC_0,           KC_1,           KC_2,           KC_3,           KC_DOT,          C(KC_Y),        C(KC_Z),   KC_PAGE_DOWN, _______,    _______,    _______,    KC_END,         _______,
-    KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT,  KC_TRANSPARENT, KC_DELETE, KC_ENTER,     _______,    _______,    _______,    KC_TRANSPARENT, QK_KB_10
+    KC_TRANSPARENT, S(KC_QUOTE),    KC_4,           KC_5,           KC_6,           S(KC_SEMICOLON),                            KC_PAGE_UP,   KC_MS_BTN1, KC_UP,      KC_MS_BTN2, KC_HOME,        _______,
+    KC_TRANSPARENT, KC_0,           KC_1,           KC_2,           KC_3,           KC_DOT,          C(KC_Y),        C(KC_Z),   KC_PAGE_DOWN, KS_LEFT,    KC_DOWN,    KC_RIGHT,   KC_END,         _______,
+    KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_SPACE,        KC_TRANSPARENT, KC_DELETE, KC_ENTER,     _______,    _______,    _______,    KC_TRANSPARENT, QK_KB_10
   ),
 
   [3] = LAYOUT_universal(
-    LAY_TOG,        KC_NO,          KC_NO,          KC_NO,          KC_NO,          KC_NO,                                           KC_NO,          KC_NO,   KC_NO,    KC_NO,    KC_NO,          KC_NO,
-    KC_TRANSPARENT, KC_NO,          KC_NO,          KC_NO,          KC_NO,          RGB_TOG,                                         QK_KB_0,        QK_KB_1, QK_KB_13, QK_KB_14, QK_KB_15,       KC_NO,
-    KC_TRANSPARENT, KC_NO,          RGB_SAI,        RGB_HUI,        RGB_VAI,        RGB_MODE_FORWARD,                                QK_KB_11,       QK_KB_1, QK_KB_8,  QK_KB_11, KC_NO,          KC_NO,
+    LAY_TOG,        KC_NO,          KC_NO,          KC_NO,          KC_NO,          KC_NO,                                            KC_NO,          KC_NO,   KC_NO,    KC_NO,    KC_NO,          KC_NO,
+    KC_TRANSPARENT, KC_NO,          KC_NO,          KC_NO,          KC_NO,          RGB_TOG,                                          QK_KB_0,        QK_KB_1, QK_KB_13, QK_KB_14, QK_KB_15,       KC_NO,
+    KC_TRANSPARENT, KC_NO,          RGB_SAI,        RGB_HUI,        RGB_VAI,        RGB_MODE_FORWARD,                                 QK_KB_11,       QK_KB_2, QK_KB_8,  QK_KB_11, KC_NO,          KC_NO,
     KC_TRANSPARENT, KC_NO,          RGB_SAD,        RGB_HUD,        RGB_VAD,        RGB_MODE_REVERSE, KC_TRANSPARENT, RCS(KC_ESCAPE), QK_KB_12,       QK_KB_3, QK_KB_9,  QK_KB_12, KC_NO,          KC_NO,
-    KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT,   KC_TRANSPARENT, LCA(KC_DELETE), KC_TRANSPARENT, _______, _______,  _______,  KC_TRANSPARENT, LCA(KC_PAUSE)
+    KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT,   KC_TRANSPARENT, LCA(KC_DELETE), LCA(KC_ESCAPE), _______, _______,  _______,  KC_TRANSPARENT, LCA(KC_PAUSE)
   ),
 };
 // clang-format on
@@ -71,23 +71,23 @@ layer_state_t layer_state_set_user(layer_state_t state) {
     return state;
 }
 
+#ifdef LAYER_LED_ENABLE
 bool process_record_user(uint16_t keycode, keyrecord_t* record)
 {
   switch(keycode) {
-    #ifdef LAYER_LED_ENABLE
     case LAY_TOG:
       toggle_layer_led(record->event.pressed);
       return true;
-    #endif
     default:
       break;
   }
   return true;
 }
+#endif
 
 #ifdef OLED_ENABLE
 
-#    include "lib/oledkit/oledkit.h"
+#include "lib/oledkit/oledkit.h"
 
 void oledkit_render_info_user(void) {
     keyball_oled_render_keyinfo();
