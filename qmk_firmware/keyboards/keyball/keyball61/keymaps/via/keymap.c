@@ -75,7 +75,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t* record)
 {
   switch(keycode) {
     #ifdef LAYER_LED_ENABLE
-    case LAY_TAG:
+    case LAY_TOG:
       toggle_layer_led(record->event.pressed);
       return true;
     #endif
