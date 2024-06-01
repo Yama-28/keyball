@@ -39,3 +39,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define AUTO_MOUSE_DEFAULT_LAYER 2
 
 //#define KEYBALL_SCROLLSNAP_ENABLE 1
+
+#define KEYBALL_CPI_DEFAULT 700
+#define KEYBALL_SCROLL_DIV_DEFAULT 5
+#define KEYBALL_SCROLLSNAP_ENABLE 0
