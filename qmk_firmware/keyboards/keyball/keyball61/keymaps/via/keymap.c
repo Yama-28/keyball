@@ -20,14 +20,6 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 #include "quantum.h"
 
-#ifdef LAYER_LED_ENABLE
-#include "layer_led.c"
-#endif
-
-enum my_keyball_keycodes {
-  LAY_TOG = KEYBALL_SAFE_RANGE,
-};
-
 // clang-format off
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   [0] = LAYOUT_universal(
@@ -68,45 +60,27 @@ layer_state_t layer_state_set_user(layer_state_t state) {
     // Auto enable scroll mode when the highest layer is 3
     keyball_set_scroll_mode(get_highest_layer(state) == 3);
   
-    //change_layer_led_color(state);
-
     // LOWER + RAISE = ADJUST のようなTri Layersを使う場合
     // これを先に書いておかないと3の色がおかしくなる
     state = update_tri_layer_state(state, 1, 2, 3);
-
     uint8_t layer = biton32(state);
     switch (layer) {
-        case 0:
-            rgblight_sethsv(HSV_OFF);
-            break;
-        case 1:
-            rgblight_sethsv(HSV_BLUE);
-            break;
-        case 2:
-            rgblight_sethsv(HSV_RED);
-            break;
-        case 3:
-            rgblight_sethsv(HSV_GREEN);
-            break;
+      case 0:
+        rgblight_sethsv(HSV_OFF);
+        break;
+      case 1:
+        rgblight_sethsv(HSV_BLUE);
+        break;
+      case 2:
+        rgblight_sethsv(HSV_RED);
+        break;
+      case 3:
+        rgblight_sethsv(HSV_GREEN);
+        break;
     }
   
     return state;
 }
-
-#ifdef LAYER_LED_ENABLE
-
-bool process_record_user(uint16_t keycode, keyrecord_t* record)
-{
-  switch(keycode) {
-    case LAY_TOG:
-      toggle_layer_led(record->event.pressed);
-      return true;
-    default:
-      break;
-  }
-  return true;
-}
-#endif
 
 #ifdef OLED_ENABLE
 
