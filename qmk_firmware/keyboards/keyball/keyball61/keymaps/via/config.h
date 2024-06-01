@@ -40,6 +40,4 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 #define KEYBALL_SCROLLSNAP_ENABLE 1
 
-#define LAYER_LED_ENABLE
-
 //#define TAPPING_TERM 180
