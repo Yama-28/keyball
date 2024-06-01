@@ -58,8 +58,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     LAY_TOG,        KC_NO,          KC_NO,          KC_NO,          KC_NO,          KC_NO,                                           KC_NO,          KC_NO,   KC_NO,    KC_NO,    KC_NO,          KC_NO,
     KC_TRANSPARENT, KC_NO,          KC_NO,          KC_NO,          KC_NO,          RGB_TOG,                                         QK_KB_0,        QK_KB_1, QK_KB_13, QK_KB_14, QK_KB_15,       KC_NO,
     KC_TRANSPARENT, KC_NO,          RGB_SAI,        RGB_HUI,        RGB_VAI,        RGB_MODE_FORWARD,                                QK_KB_11,       QK_KB_1, QK_KB_8,  QK_KB_11, KC_NO,          KC_NO,
-    KC_TRANSPARENT, KC_NO,          RGB_SAD,        RGB_HUD,        RGB_VAD,        RGB_MODE_REVERSE, KC_TRANSPARENT, CS(KC_ESCAPE), QK_KB_12,       QK_KB_3, QK_KB_9,  QK_KB_12, KC_NO,          KC_NO,
-    KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT,   KC_TRANSPARENT, CA(KC_DELETE), KC_TRANSPARENT, _______, _______,  _______,  KC_TRANSPARENT, CS(KC_PAUSE)
+    KC_TRANSPARENT, KC_NO,          RGB_SAD,        RGB_HUD,        RGB_VAD,        RGB_MODE_REVERSE, KC_TRANSPARENT, RSC(KC_ESCAPE), QK_KB_12,       QK_KB_3, QK_KB_9,  QK_KB_12, KC_NO,          KC_NO,
+    KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT,   KC_TRANSPARENT, LCA(KC_DELETE), KC_TRANSPARENT, _______, _______,  _______,  KC_TRANSPARENT, LCA(KC_PAUSE)
   ),
 };
 // clang-format on
