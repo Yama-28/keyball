@@ -50,7 +50,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     KC_TRANSPARENT, KC_F1,          KC_F2,          KC_F3,          KC_F4,          KC_F5,                                      KC_F6,        KC_F7,      KC_F8,      KC_F9,      KC_F10,         KC_F11,
     KC_TRANSPARENT, KC_SLASH,       KC_7,           KC_8,           KC_9,           KC_MINUS,                                   KC_NO,        KC_MS_BTN4, KC_MS_BTN5, KC_MS_BTN3, KC_NO,          KC_F12,
     KC_TRANSPARENT, S(KC_QUOTE),    KC_4,           KC_5,           KC_6,           S(KC_SEMICOLON),                            KC_PAGE_UP,   KC_MS_BTN1, KC_UP,      KC_MS_BTN2, KC_HOME,        _______,
-    KC_TRANSPARENT, KC_0,           KC_1,           KC_2,           KC_3,           KC_DOT,          C(KC_Y),        C(KC_Z),   KC_PAGE_DOWN, KS_LEFT,    KC_DOWN,    KC_RIGHT,   KC_END,         _______,
+    KC_TRANSPARENT, KC_0,           KC_1,           KC_2,           KC_3,           KC_DOT,          C(KC_Y),        C(KC_Z),   KC_PAGE_DOWN, KC_LEFT,    KC_DOWN,    KC_RIGHT,   KC_END,         _______,
     KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_SPACE,        KC_TRANSPARENT, KC_DELETE, KC_ENTER,     _______,    _______,    _______,    KC_TRANSPARENT, QK_KB_10
   ),
 
@@ -72,6 +72,7 @@ layer_state_t layer_state_set_user(layer_state_t state) {
 }
 
 #ifdef LAYER_LED_ENABLE
+
 bool process_record_user(uint16_t keycode, keyrecord_t* record)
 {
   switch(keycode) {
