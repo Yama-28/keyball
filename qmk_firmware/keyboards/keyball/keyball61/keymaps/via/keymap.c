@@ -20,38 +20,46 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 #include "quantum.h"
 
+#ifdef LAYER_LED_ENABLE
+#include "layer_led.c"
+#endif
+
+enum my_keyball_keycodes {
+  LAY_TOG = KEYBALL_SAFE_RANGE,
+}
+
 // clang-format off
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   [0] = LAYOUT_universal(
-    KC_ESC   , KC_1     , KC_2     , KC_3     , KC_4     , KC_5     ,                                  KC_6     , KC_7     , KC_8     , KC_9     , KC_0     , KC_MINS  ,
-    KC_DEL   , KC_Q     , KC_W     , KC_E     , KC_R     , KC_T     ,                                  KC_Y     , KC_U     , KC_I     , KC_O     , KC_P     , KC_INT3  ,
-    KC_TAB   , KC_A     , KC_S     , KC_D     , KC_F     , KC_G     ,                                  KC_H     , KC_J     , KC_K     , KC_L     , KC_SCLN  , S(KC_7)  ,
-    MO(1)    , KC_Z     , KC_X     , KC_C     , KC_V     , KC_B     , KC_RBRC  ,              KC_NUHS, KC_N     , KC_M     , KC_COMM  , KC_DOT   , KC_SLSH  , KC_RSFT  ,
-    _______  , KC_LCTL  , KC_LALT  , KC_LGUI,LT(1,KC_LNG2),LT(2,KC_SPC),LT(3,KC_LNG1),    KC_BSPC,LT(2,KC_ENT),LT(1,KC_LNG2),KC_RGUI, _______ , KC_RALT  , KC_PSCR
+    KC_ESCAPE,     KC_1,        KC_2,        KC_3,        KC_4,                KC_5,                                                    KC_6,         KC_7,    KC_8,     KC_9,     KC_0,         KC_BSPC,
+    KC_TAB,        KC_Q,        KC_W,        KC_E,        KC_R,                KC_T,                                                    KC_Y,         KC_U,    KC_I,     KC_O,     KC_P,         KC_LEFT_BRACKET,
+    KC_LEFT_CTRL,  KC_A,        KC_S,        KC_D,        KC_F,                KC_G,                                                    KC_H,         KC_J,    KC_K,     KC_L,     KC_SEMICOLON, KC_QUOTE,
+    KC_LEFT_SHIFT, KC_Z,        KC_X,        KC_C,        KC_V,                KC_B,           KC_ESCAPE,           KC_PRINT_SCREEN,    KC_N,         KC_M,    KC_COMMA, KC_DOT,   KC_SLASH,     KC_INTERNATIONAL_1,
+    _______,       KC_LEFT_ALT, KC_LEFT_GUI, KC_LEFT_CTL, LT(1,KC_LANGUAGE_2), LT(2,KC_SPACE), LT(3,KC_LANGUAGE_1), LT(2,KC_BACKSPACE), LT(1,KC_ENT), _______, _______,  _______,  KC_RALT,      QK_KB_10
   ),
 
   [1] = LAYOUT_universal(
-    S(KC_ESC), S(KC_1)  , KC_LBRC  , S(KC_3)  , S(KC_4)  , S(KC_5)  ,                                  KC_EQL   , S(KC_6)  ,S(KC_QUOT), S(KC_8)  , S(KC_9)  ,S(KC_INT1),
-    S(KC_DEL), S(KC_Q)  , S(KC_W)  , S(KC_E)  , S(KC_R)  , S(KC_T)  ,                                  S(KC_Y)  , S(KC_U)  , S(KC_I)  , S(KC_O)  , S(KC_P)  ,S(KC_INT3),
-    S(KC_TAB), S(KC_A)  , S(KC_S)  , S(KC_D)  , S(KC_F)  , S(KC_G)  ,                                  S(KC_H)  , S(KC_J)  , S(KC_K)  , S(KC_L)  , KC_QUOT  , S(KC_2)  ,
-    _______  , S(KC_Z)  , S(KC_X)  , S(KC_C)  , S(KC_V)  , S(KC_B)  ,S(KC_RBRC),           S(KC_NUHS), S(KC_N)  , S(KC_M)  ,S(KC_COMM), S(KC_DOT),S(KC_SLSH),S(KC_RSFT),
-    _______  ,S(KC_LCTL),S(KC_LALT),S(KC_LGUI), _______  , _______  , _______  ,            _______  , _______  , _______  ,S(KC_RGUI), _______  , S(KC_RALT), _______
+    KC_TRANSPARENT, KC_F1,       KC_F2,        KC_F3,       KC_F4,          KC_F5,                                        KC_F6,       KC_F7,       KC_F8,            KC_F9,        KC_F10,                KC_F11,
+    KC_TRANSPARENT, S(KC_1),     S(KC_2),      S(KC_3),     S(KC_4),        S(KC_5),                                      S(KC_6)  ,   S(KC_7),     S(KC_8),          S(KC_9),      S(KC_INTERNATIONAL_3), S(KC_F12),
+    KC_TRANSPARENT, KC_F1,       KC_F2,        KC_F3,       KC_F4,          KC_F5,                                        S(KC_EQUAL), KC_MINUS,    KC_RIGHT_BRACKET, KC_BACKSLASH, S(KC_SEMICOLON),       S(KC_QUOTE),
+    KC_TRANSPARENT, KC_F6,       KC_F7,        KC_F8,       KC_F9,          KC_F10,         KC_F11,         KC_F12,       KC_EQUAL,    S(KC_MINUS), S(KC_COMMA),      S(KC_DOT),    S(KC_SLSH),            S(KC_INTERNATIONAL_1),
+    KC_TRANSPARENT, KC_LEFT_GUI, KC_LEFT_CTRL, KC_LEFT_ALT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_BACKSPACE, KC_ENTER,    _______,     _______,          _______,      KC_TRANSPARENT,        KC_TRANSPARENT
   ),
 
   [2] = LAYOUT_universal(
-    SSNP_FRE , KC_F1    , KC_F2    , KC_F3    , KC_F4    , KC_F5    ,                                  KC_F6    , KC_F7    , KC_F8    , KC_F9    , KC_F10   , KC_F11   ,
-    SSNP_VRT , _______  , KC_7     , KC_8     , KC_9     , _______  ,                                  _______  , KC_LEFT  , KC_UP    , KC_RGHT  , _______  , KC_F12   ,
-    SSNP_HOR , _______  , KC_4     , KC_5     , KC_6     ,S(KC_SCLN),                                  KC_PGUP  , KC_BTN1  , KC_DOWN  , KC_BTN2  , KC_BTN3  , _______  ,
-    _______  , _______  , KC_1     , KC_2     , KC_3     ,S(KC_MINS), S(KC_8)  ,            S(KC_9)  , KC_PGDN  , _______  , _______  , _______  , _______  , _______  ,
-    _______  , _______  , KC_0     , KC_DOT   , _______  , _______  , _______  ,             KC_DEL  , _______  , _______  , _______  , _______  , _______  , _______
+    KC_TRANSPARENT, KC_F1,          KC_F2,          KC_F3,          KC_F4,          KC_F5,                                      KC_F6,        KC_F7,      KC_F8,      KC_F9,      KC_F10,         KC_F11,
+    KC_TRANSPARENT, KC_SLASH,       KC_7,           KC_8,           KC_9,           KC_MINUS,                                   KC_NO,        KC_MS_BTN4, KC_MS_BTN5, KC_MS_BTN3, KC_NO,          KC_F12,
+    KC_TRANSPARENT, S(KC_QUOTE),    KC_4,           KC_5,           KC_6,           S(KC_SEMICOLON),                            KC_PAGE_UP,   KC_MS_BTN1, KC_DOWN,    KC_MS_BTN2, KC_HOME,        _______,
+    KC_TRANSPARENT, KC_0,           KC_1,           KC_2,           KC_3,           KC_DOT,          C(KC_Y),        C(KC_Z),   KC_PAGE_DOWN, _______,    _______,    _______,    KC_END,         _______,
+    KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT,  KC_TRANSPARENT, KC_DELETE, KC_ENTER,     _______,    _______,    _______,    KC_TRANSPARENT, QK_KB_10
   ),
 
   [3] = LAYOUT_universal(
-    RGB_TOG  , AML_TO   , AML_I50  , AML_D50  , _______  , _______  ,                                  RGB_M_P  , RGB_M_B  , RGB_M_R  , RGB_M_SW , RGB_M_SN , RGB_M_K  ,
-    RGB_MOD  , RGB_HUI  , RGB_SAI  , RGB_VAI  , _______  , _______  ,                                  RGB_M_X  , RGB_M_G  , RGB_M_T  , RGB_M_TW , _______  , _______  ,
-    RGB_RMOD , RGB_HUD  , RGB_SAD  , RGB_VAD  , _______  , _______  ,                                  CPI_D1K  , CPI_D100 , CPI_I100 , CPI_I1K  , KBC_SAVE , KBC_RST  ,
-    _______  , _______  , SCRL_DVD , SCRL_DVI , SCRL_MO  , SCRL_TO  , EE_CLR   ,            EE_CLR   , KC_HOME  , KC_PGDN  , KC_PGUP  , KC_END   , _______  , _______  ,
-    QK_BOOT  , _______  , KC_LEFT  , KC_DOWN  , KC_UP    , KC_RGHT  , _______  ,            _______  , KC_BSPC  , _______  , _______  , _______  , _______  , QK_BOOT
+    LAY_TAG,        KC_NO,          KC_NO,          KC_NO,          KC_NO,          KC_NO,                                           KC_NO,          KC_NO,   KC_NO,    KC_NO,    KC_NO,          KC_NO,
+    KC_TRANSPARENT, KC_NO,          KC_NO,          KC_NO,          KC_NO,          RGB_TOG,                                         QK_KB_0,        QK_KB_1, QK_KB_13, QK_KB_14, QK_KB_15,       KC_NO,
+    KC_TRANSPARENT, KC_NO,          RGB_SAI,        RGB_HUI,        RGB_VAI,        RGB_MODE_FORWARD,                                QK_KB_11,       QK_KB_1, QK_KB_8,  QK_KB_11, KC_NO,          KC_NO,
+    KC_TRANSPARENT, KC_NO,          RGB_SAD,        RGB_HUD,        RGB_VAD,        RGB_MODE_REVERSE, KC_TRANSPARENT, CS(KC_ESCAPE), QK_KB_12,       QK_KB_3, QK_KB_9,  QK_KB_12, KC_NO,          KC_NO,
+    KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT,   KC_TRANSPARENT, CA(KC_DELETE), KC_TRANSPARENT, _______, _______,  _______,  KC_TRANSPARENT, CS(KC_PAUSE)
   ),
 };
 // clang-format on
@@ -59,7 +67,22 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 layer_state_t layer_state_set_user(layer_state_t state) {
     // Auto enable scroll mode when the highest layer is 3
     keyball_set_scroll_mode(get_highest_layer(state) == 3);
+    change_layer_led_color(state);
     return state;
+}
+
+bool process_record_user(uint16_t keycode, keyrecord_t* record)
+{
+  switch(keycode) {
+    #ifdef LAYER_LED_ENABLE
+    case LAY_TAG:
+      toggle_layer_led(record->event.pressed);
+      return true;
+    #endif
+    default:
+      break;
+  }
+  return true;
 }
 
 #ifdef OLED_ENABLE
