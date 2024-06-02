@@ -43,4 +43,4 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define KEYBALL_CPI_DEFAULT 700
 #define KEYBALL_SCROLL_DIV_DEFAULT 5
 //#define TAPPING_TERM 150
-#define TAPPING_TERM 250
+#define TAPPING_TERM 190
