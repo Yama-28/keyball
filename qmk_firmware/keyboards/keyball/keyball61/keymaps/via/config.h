@@ -44,3 +44,9 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define KEYBALL_SCROLL_DIV_DEFAULT 5
 
 #define TAPPING_TERM 150
+
+#define RETRO_TAPPING
+#define PERMISSIVE_HOLD
+//#define TAPPING_FORCE_HOLD
+#define QUICK_TAP_TERM 0
+#define IGNORE_MOD_TAP_INTERRUPT
