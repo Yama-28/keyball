@@ -43,8 +43,8 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define KEYBALL_CPI_DEFAULT 700
 #define KEYBALL_SCROLL_DIV_DEFAULT 5
 
-//#undef  TAPPING_TERM
-//#define TAPPING_TERM 100
+#undef  TAPPING_TERM
+#define TAPPING_TERM 100
 //#define RETRO_TAPPING
 #define PERMISSIVE_HOLD
 //#define TAPPING_FORCE_HOLD
