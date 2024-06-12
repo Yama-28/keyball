@@ -50,12 +50,12 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 // TAPPING_TERMを経過しても、他のキーを押していなければTap扱い
 //#define RETRO_TAPPING０
 
-// TAPPING_TERM以下でも他のキーをdwon/upした時点でHold扱い
-//#define PERMISSIVE_HOLD
-
 // Mod Tap keyをTap後にすぐにHoldしたときに、Hold扱い
 //#define TAPPING_FORCE_HOLD
 #define QUICK_TAP_TERM 0
+
+// TAPPING_TERM以下でも他のキーをdwon/upした時点でHold扱い
+//#define PERMISSIVE_HOLD
 
 // TAPPING_TERM以下でも他のキーをdownした時点でHold扱い
 #define HOLD_ON_OTHER_KEY_PRESS
