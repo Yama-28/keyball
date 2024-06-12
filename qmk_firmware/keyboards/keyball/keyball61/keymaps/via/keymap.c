@@ -27,7 +27,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     KC_TAB,         KC_Q,           KC_W,           KC_E,        KC_R,                KC_T,                                                        KC_Y,           KC_U,        KC_I,            KC_O,          KC_P,                  KC_LEFT_BRACKET,
     KC_LEFT_CTRL,   KC_A,           KC_S,           KC_D,        KC_F,                KC_G,                                                        KC_H,           KC_J,        KC_K,            KC_L,          KC_SEMICOLON,          KC_QUOTE,
     KC_LEFT_SHIFT,  KC_Z,           KC_X,           KC_C,        KC_V,                KC_B,            KC_ESCAPE,             KC_PRINT_SCREEN,     KC_N,           KC_M,        KC_COMMA,        KC_DOT,        KC_SLASH,              KC_INTERNATIONAL_1,
-    KC_LEFT_ALT,    KC_LEFT_GUI,    KC_LEFT_CTRL,   KC_LEFT_ALT, LT(1,KC_LANGUAGE_2), LT(2,KC_SPACE),  LCTL(KC_LANGUAGE_1),   LT(2,KC_BACKSPACE),  LT(1,KC_ENT),   _______,     _______,          _______,      TG(2),                 QK_KB_6
+    KC_LEFT_ALT,    KC_LEFT_GUI,    KC_LEFT_CTRL,   KC_LEFT_ALT, LCTL(KC_LANGUAGE_2), LT(2,KC_SPACE),  LT(3,KC_LANGUAGE_1),   LT(2,KC_BACKSPACE),  LT(1,KC_ENT),   _______,     _______,          _______,      TG(2),                 QK_KB_6
   ),
 
   [1] = LAYOUT_universal(
