@@ -31,7 +31,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   ),
 
   [1] = LAYOUT_universal(
-    KC_TRANSPARENT, KC_1,           KC_2,           KC_3,        KC_4,                KC_5,                                                        KC_6,           KC_7,        KC_8,             KC_9,         KC_10,                 KC_11,
+    KC_TRANSPARENT, KC_1,           KC_2,           KC_3,        KC_4,                KC_5,                                                        KC_6,           KC_7,        KC_8,             KC_9,         KC_0,                  KC_BSPC,
     KC_TRANSPARENT, S(KC_1),        S(KC_2),        S(KC_3),     S(KC_4),             S(KC_5),                                                     S(KC_6),        S(KC_7),     S(KC_8),          S(KC_9),      S(KC_INTERNATIONAL_3), S(KC_LEFT_BRACKET),
     KC_TRANSPARENT, KC_F1,          KC_F2,          KC_F3,       KC_F4,               KC_F5,                                                       S(KC_EQUAL),    KC_MINUS,    KC_RIGHT_BRACKET, KC_BACKSLASH, S(KC_SEMICOLON),       S(KC_QUOTE),
     KC_TRANSPARENT, KC_F6,          KC_F7,          KC_F8,       KC_F9,               KC_F10,          KC_F11,                KC_F12,              KC_EQUAL,       S(KC_MINUS), S(KC_COMMA),      S(KC_DOT),    S(KC_SLSH),            S(KC_INTERNATIONAL_1),
@@ -39,7 +39,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   ),
 
   [2] = LAYOUT_universal(
-    KC_TRANSPARENT, KC_1,           KC_2,           KC_3,           KC_4,             KC_5,                                                        KC_6,           KC_7,        KC_8,             KC_9,         KC_10,                KC_11,
+    KC_TRANSPARENT, KC_1,           KC_2,           KC_3,           KC_4,             KC_5,                                                        KC_6,           KC_7,        KC_8,             KC_9,         KC_0,                 KC_BSPC,
     KC_TRANSPARENT, KC_SLASH,       KC_7,           KC_8,           KC_9,             KC_MINUS,                                                    KC_NO,          KC_MS_BTN4,  KC_MS_BTN5,       KC_MS_BTN3,   KC_NO,                KC_TRANSPARENT,
     KC_TRANSPARENT, S(KC_QUOTE),    KC_4,           KC_5,           KC_6,             S(KC_SEMICOLON),                                             KC_PAGE_UP,     KC_MS_BTN1,  KC_UP,            KC_MS_BTN2,   KC_HOME,              KC_TRANSPARENT,
     KC_TRANSPARENT, KC_0,           KC_1,           KC_2,           KC_3,             KC_DOT,          C(KC_Y),               C(KC_Z),             KC_PAGE_DOWN,   KC_LEFT,     KC_DOWN,          KC_RIGHT,     KC_END,               KC_TRANSPARENT,
