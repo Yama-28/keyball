@@ -48,7 +48,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define TAPPING_TERM 150
 
 // TAPPING_TERMを経過しても、他のキーを押していなければTap扱い
-//#define RETRO_TAPPING０
+//#define RETRO_TAPPING
 
 // Mod Tap keyをTap後にすぐにHoldしたときに、Hold扱い
 //#define TAPPING_FORCE_HOLD
