@@ -54,7 +54,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 //#define TAPPING_FORCE_HOLD
 #define QUICK_TAP_TERM 0
 
-// TAPPING_TERM以下でも他のキーをdwon/upした時点でHold扱い
+// TAPPING_TERM以下でも他のキーをdwon→upした時点でHold扱い
 #define PERMISSIVE_HOLD
 
 // TAPPING_TERM以下でも他のキーをdownした時点でHold扱い
