@@ -45,7 +45,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 // TapからHoldに切り替わるまでの押下時間(ms)
 #undef  TAPPING_TERM
-#define TAPPING_TERM 200
+#define TAPPING_TERM 150
 
 // TAPPING_TERMを経過しても、他のキーを押していなければTap扱い
 //#define RETRO_TAPPING
