@@ -44,8 +44,8 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define KEYBALL_SCROLL_DIV_DEFAULT 5
 
 // TapからHoldに切り替わるまでの押下時間(ms)
-#undef  TAPPING_TERM
-#define TAPPING_TERM 150
+//#undef  TAPPING_TERM
+//#define TAPPING_TERM 150
 
 // TAPPING_TERMを経過しても、他のキーを押していなければTap扱い
 //#define RETRO_TAPPING
