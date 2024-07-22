@@ -24,14 +24,14 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   // keymap for default (VIA)
   [0] = LAYOUT_universal(
-    KC_TAB,        KC_Q,     KC_W,     KC_E,     KC_R,     KC_T,                                        KC_Y,     KC_U,     KC_I,     KC_O,     KC_P,                 KC_LEFT_BRACKET,
+    KC_TAB,        KC_Q,     KC_W,     KC_E,     KC_R,     KC_T,                                        KC_Y,     KC_U,     KC_I,     KC_O,     KC_P,                 KC_BACKSPACE,
     KC_LEFT_CTRL,  KC_A,     KC_S,     KC_D,     KC_F,     KC_G,                                        KC_H,     KC_J,     KC_K,     KC_L,     RSFT_T(KC_SEMICOLON), RCTL_T(KC_QUOTE),
-    KC_LEFT_SHIFT, KC_Z,     KC_X,     KC_C,     KC_V,     KC_B,                                        KC_N,     KC_M,     KC_COMM,  KC_DOT,   RALT_T(KC_SLASH),     KC_INTERNATIONAL_1,
-              KC_LEFT_CTRL, KC_LEFT_ALT, KC_LEFT_GUI, LT(2,KC_LANGUAGE_2), LT(3,KC_BACKSPACE),    LT(2,KC_ENTER), LT(1,KC_LANGUAGE_1), _______, _______, KC_ESCAPE
+    KC_LEFT_SHIFT, KC_Z,     KC_X,     KC_C,     KC_V,     KC_B,                                        KC_N,     KC_M,     KC_COMM,  KC_DOT,   RALT_T(KC_SLASH),     LT(3,KC_INTERNATIONAL_1),
+              KC_LEFT_CTRL, KC_LEFT_ALT, KC_LEFT_GUI, LT(2,KC_LANGUAGE_1), LT(3,KC_SPACE),        LT(2,KC_ENTER), LT(1,KC_LANGUAGE_2), _______, _______, KC_ESCAPE
   ),
 
   [1] = LAYOUT_universal(
-    KC_TRANSPARENT, S(KC_1), S(KC_2), S(KC_3), S(KC_4), S(KC_5),                                        S(KC_6),     S(KC_7),     S(KC_8),          S(KC_9),      S(KC_INTERNATIONAL_3), S(KC_LEFT_BRACKET),
+    KC_TRANSPARENT, S(KC_1), S(KC_2), S(KC_3), S(KC_4), S(KC_5),                                        S(KC_6),     S(KC_7),     S(KC_8),          S(KC_9),      S(KC_INTERNATIONAL_3), KC_LEFT_BRACKET,
     KC_TRANSPARENT, KC_F1,   KC_F2,   KC_F3,   KC_F4,   KC_F5,                                          S(KC_EQUAL), KC_MINUS,    KC_RIGHT_BRACKET, KC_BACKSLASH, S(KC_SEMICOLON),       S(KC_QUOTE),
     KC_TRANSPARENT, KC_F6,   KC_F7,   KC_F8,   KC_F9,   KC_F10,                                         KC_EQUAL,    S(KC_MINUS), S(KC_COMMA),      S(KC_DOT),    S(KC_SLSH),            S(KC_INTERNATIONAL_1),
               KC_F11, KC_F12, KC_TRANSPARENT, KC_LEFT_ALT, KC_TRANSPARENT,                        KC_TRANSPARENT, KC_TRANSPARENT, _______, _______, KC_TRANSPARENT
@@ -45,10 +45,10 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   ),
 
   [3] = LAYOUT_universal(
-    LCA(KC_PAUSE),  QK_KB_1,  QK_KB_14, QK_KB_13, QK_KB_15, QK_KB_0,                                    KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO,
+    LCA(KC_PAUSE),  QK_KB_1,  QK_KB_14, QK_KB_13, QK_KB_15, QK_KB_0,                                    KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, LSA_T(KC_DELETE),
     KC_TRANSPARENT, QK_KB_10, QK_KB_11, QK_KB_8,  QK_KB_2,  QK_KB_4,                                    KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO,
     KC_TRANSPARENT, RGB_TOG,  QK_KB_12, QK_KB_9,  QK_KB_3,  QK_KB_5,                                    KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO,
-              KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT,     KC_TRANSPARENT, KC_TRANSPARENT, _______, _______, RCS(KC_ESCAPE)
+              KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT,     KC_TRANSPARENT, KC_TRANSPARENT, _______, _______, RCS_T(KC_ESCAPE)
   ),
 };
 // clang-format on
